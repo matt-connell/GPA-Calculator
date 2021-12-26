@@ -1,6 +1,4 @@
 
-
-
 function submitGrades(){
     //get the number of courses
     var courses = document.getElementById("courseNum").value;
@@ -72,15 +70,50 @@ function submitGrades(){
         var result = document.createElement("P");
         result.innerText = "GPA = " + average;
         document.body.appendChild(result);
+
+        var gpa = document.createElement("P");
+        gpa.innerText = "" + calculateGPA(average);
+        document.body.appendChild(gpa);
         
         
     }
+}
 
+function calculateGPA(avg){
+    if (avg >= 97  && avg <=100){
+        let gpa = "Using the 4.0 Scale: 4.0";
+        return gpa;
+    }
 
-    
+    if (avg >= 93  && avg < 97){
+        let gpa = "Using the 4.0 Scale: 4.0";
+        return gpa;
+    }
 
+    if (avg >= 89  && avg < 93){
+        let gpa = "Using the 4.0 Scale: 3.7";
+        return gpa;
+    }
 
+    if (avg >= 86  && avg < 89){
+        let gpa = "Using the 4.0 Scale: 3.3";
+        return gpa;
+    }
 
+    if (avg >= 83  && avg < 86){
+        let gpa = "Using the 4.0 Scale: 3.0";
+        return gpa;
+    }
+
+    if (avg >= 79  && avg < 83){
+        let gpa = "Using the 4.0 Scale: 2.7";
+        return gpa;
+    }
+
+    if (avg >= 76  && avg < 79){
+        let gpa = "Using the 4.0 Scale: 2.3";
+        return gpa;
+    }
 
 
 }
